@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='utf-8'>
+    <title>gmapsサンプル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewer.css">
+    <script src='http://maps.google.com/maps/api/js?sensor=true'></script>
+    <script src='js/gmaps.js'></script>
+    <script>
+        window.onload = function(){
+            var lat = 33.562145;
+            var lng = 130.363510;
+            var map = new GMaps({
+                div: '#map',
+                lat: -20.604694,
+                lng: 301.020441,
+                zoom: 3
+            });
+ 
+            map.addMarker({//ウユニ
+                lat: -20.448351,
+                lng: -66.841084,
+                title: 'uyuni',
+                icon: 'images/map_uyuni.png',
+                infoWindow: {
+                    content: '<p>ウユニ塩湖</p>'
+                }
+            });
+
+            map.addMarker({//イグアス
+                lat: -23.434553,
+                lng:  -46.478126,
+                title: 'iguazu',
+                icon: 'images/map_iguazu.png',
+                infoWindow: {
+                    content: '<p>イグアスの滝</p>'
+                }
+            });
+
+            map.addMarker({
+                lat: -13.538027,
+                lng:  -71.943650,
+                title: 'machupicchu',
+                icon: 'images/map_Machu.png',
+                infoWindow: {
+                    content: '<p>マチュピチュ</p>'
+                }
+            });
+            var path = [[35.771786, 140.393185],//成田
+                                [19.436365 , -99.071909],//メキシコ
+                                [-12.024001, -77.112014],//リマ
+                                [-23.434553 , -46.478126],//サンパウロ
+                                [-12.024053 , -77.112036],//リマ
+                                [-13.538027 , -71.943650],//クスコ
+                                [-16.508890 , -68.176900],//ラパス
+                                [-20.448351 , -66.841084],//ウユニ
+                                [-16.508890 , -68.176900],//ラパス
+                                [-12.024053 , -77.112036],//リマ
+                                [40.637039 , -73.780098],//ニューヨーク
+                                [35.771786, 140.393185],//成田
+                                ];
+
+            map.drawPolyline({
+              path: path,
+              strokeColor: '#131540',
+              strokeOpacity: 0.6,
+              strokeWeight: 6
+            });
+        };
+    </script>
+</head>
+<body>
+<div id='map'></div>
+    <div>
+ <ul id="images">
+   <li><img src="images/gUyuni1.jpg" alt="Picture"></li>
+   <li><img src="images/gUyuni2.jpg" alt="Picture 2"></li>
+   <li><img src="images/gUyuni3.jpg" alt="Picture 3"></li>
+    <!-- ここに必要な分だけ追加する  -->
+ </ul>
+</div>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/viewer.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
