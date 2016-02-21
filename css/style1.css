@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+a:link,
+a:visited,
+a:active {
+	color: #444;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #b7282e;
+}
+
+html {
+	overflow-y:scroll;
+}
+
+body {
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 1.5;
+	background: rgb(47,51,78);
+}
+
+h2 {
+	display: none;
+}
+
+header {
+}
+
+.wrap {
+	text-align:center;
+	float:left;
+	width: calc((100% - 6px) / 5 * 2 - 6px);
+	margin: 12px 3px 3px 6px;
+}
+
+header h1 {
+	min-height: calc(40vh - 15px);
+	padding-top: calc(20vh - 2em);
+	background-image: url(../images/title1.gif);
+    background-size: cover;
+	margin: 0 0 6px;
+	line-height: 2;
+    font-family: 'Special Elite', cursive;
+}
+
+header .wrap p {
+	font-size: 90%;
+	line-height: 2;
+	min-height:calc(20vh - 6px);
+	padding-top: calc(10vh - 3em);
+	margin:6px 0 0;
+	color: #eee;
+}
+
+#slide {
+	width: calc((100% - 6px) / 5 * 3 - 6px);
+	height: calc(60vh - 15px);
+	float: right;
+	margin: 12px 6px 3px 3px;
+	overflow:hidden;
+    -webkit-filter:sepia(40%);
+    filter:sepia(40%);
+}
+#slide:hover{
+    -webkit-filter:none;
+    filter:none;
+}
+#slide img {
+	width: 100%;
+}
+
+.eachPage{
+	float:left;
+	margin: 3px 3px 12px;
+	width: calc((100% - 6px) / 5 - 6px);
+	min-height: calc(40vh - 15px);
+    padding:6px;
+    -webkit-filter:sepia(40%);
+    filter:sepia(40%);
+}
+.eachPage:hover{
+    -webkit-filter:none;
+    filter:none;
+}
+
+div.eachPage:nth-of-type(1){
+	margin-right: 6px;
+	clear: both;
+	background:#FF6968;
+	width: calc((100% - 6px) / 5 * 2 - 6px);
+    padding: 0;
+    -webkit-filter:none;
+    filter:none;
+}
+div.eachPage .tab-content {
+    padding: 6px;
+}
+div.eachPage:nth-of-type(2){
+	margin-left: 6px;
+	background-image: url(../images/aboutme.jpg);
+    background-size: cover;
+    background-position: left center;
+}
+div.eachPage:nth-of-type(3){
+	background-image: url(../images/skills.jpg);
+    background-size: cover;
+    background-position: left center;
+}
+div.eachPage:nth-of-type(4){
+	background-image: url(../images/contact.jpg);
+    background-size: cover;
+    background-position: right center;
+}
+#portfolio {
+	float:right;
+}
+#portfolio.eachPage>ul.nav>li>a,
+#portfolio.eachPage>div{
+    color: rgb(47,51,78);
+}
+
+.nav-tabs{
+	background:#AD4747;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	background:#FF6968;
+}
+
+.carousel-inner>.item.active {
+	height:100%;
+}
+
+.eachPage table {
+    background: rgba(0,0,0,.4);
+    color: antiquewhite;
+    font-weight: normal;
+    width:98%;
+}
+.eachPage table tr td,
+.eachPage table tr th
+{
+    font-weight: normal;
+    padding-right:6px;
+    padding-left: 6px;
+    font-size:80%;
+}
+.eachPage table tr th {
+    background: rgba(0,0,0,.8);
+}
+.eachPage table tr td {
+    text-shadow: 1px 1px 3px #000;
+}

@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+a:link,
+a:visited,
+a:active {
+	color: #f8f4e6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #b7282e;
+}
+
+html {
+	overflow-y:scroll;
+}
+
+body {
+	font-family: "HG行書体M","HGP行書体","メイリオ", Meiryo,sans-serif;
+	line-height: 1.5;
+}
+
+.eachPage {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	color: #fff;
+	position: relative;
+	box-shadow: -5px -5px 5px 5px rgba(0,0,0,0.5);
+	background-position: right center;
+}
+
+.eachPage h2 {
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;	/*ieはtb=top-bottom*/
+	font-size: 150%;
+	font-weight: normal;
+	padding: 10px;
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.eachPage .contents {
+	position: absolute;
+	top: 30%;
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	padding: 30px;
+	background: rgba(0,0,0,0.2);
+}
+.eachPage .contents.pLeft{
+	left: 20%;
+}
+
+.eachPage .contents.pRight{
+	right: 20%;
+}
+
+.eachPage h3 {
+	font-size: 300%;
+	font-weight: normal;
+	border-bottom: 1px #fff solid;
+	margin-bottom: 12px;
+}
+
+.eachPage .contents figure {
+	width: 20%;
+	float: left;
+	margin-right: 30px;
+}
+
+.eachPage .contents img{
+	width: 100%;
+}
+
+#selfIntro {
+	background-image: url(../images/titleBack1.jpg);
+}
+
+#skills {
+	background-image: url(../images/titleBack2.jpg);
+}
+
+#portfolio {
+	background-image: url(../images/titleBack3.jpg);
+}
+
+#contact {
+	background-image: url(../images/titleBack4.jpg);
+}
+
+/*js用*/
+
+/*初期設定*/
+.eachPage {
+	float: left;
+	width: 50px;
+	transition: width 1s ease 0s;
+	cursor: pointer;
+}
+
+.eachPage .contents {
+	display: none;
+}
+
+/*動作*/
+
+.eachPage.top {
+	width: calc(100% - 150px);
+	cursor:default;
+}
+
+@keyframes anime1 {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+.eachPage.top .contents {
+	animation: anime1 1.5s linear 0s;
+	display: block;
+}
