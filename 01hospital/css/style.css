@@ -1,0 +1,912 @@
+@charset "utf-8";
+@import url(reset.css);
+
+a {
+  font-weight: bold;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333631;
+}
+
+body {
+  color: #333631;
+  font-size: 90%;
+  font-family: "メイリオ";
+  line-height: 1.5em;
+}
+
+body#index::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../images/robi.jpg);
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  z-index: -100;
+}
+
+header > nav {
+  position: fixed;
+  top: 1em;
+  left: 0;
+  z-index: 1;
+}
+
+header > nav > ul {
+  width: 224px;
+}
+
+body#index header > nav {
+  position: fixed;
+  top: 1em;
+  left: 0;
+  transition: all 1s ease;
+}
+body#index header > nav.none {
+  left: -250px;
+  transition: all 1s ease;
+}
+header > nav > ul > li {
+  margin: 12px;
+}
+
+header > nav > ul > li > a:link,
+header > nav > ul > li > a:visited {
+  color: #333631;
+  text-decoration: none;
+}
+header > nav > ul > li > a:hover {
+  -webkit-filter: invert(100%);
+  /*color: #7b4741;*/
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+header > nav > ul > li > a {
+  background-position: center top;
+  background-size: 50px auto;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 1em;
+  padding-top: 60px;
+  padding-bottom: 6px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 80%;
+  line-height: 1em;
+}
+header > nav > ul > li:nth-child(1) {
+  display: block;
+  width: 200px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px
+}
+header > nav > ul > li:nth-child(1) > a {
+  background-image: url(../images/icons/logo.png);
+  background-size: contain;
+  width: 90%;
+  height: 0;
+  padding: 100px 0 0;
+  font-size: 0;
+  margin-left: 5%;
+}
+
+header > nav > ul > li:nth-child(1) >a:hover {
+  -webkit-filter: none;
+  background-color: transparent;
+}
+
+header > nav > ul > li:nth-child(2) > a {
+  background-image: url(../images/icons/home.png);
+}
+header > nav > ul > li:nth-child(3) > a {
+  background-image: url(../images/icons/news.png);
+}
+header > nav > ul > li:nth-child(4) > a {
+  background-image: url(../images/icons/door.png);
+}
+header > nav > ul > li:nth-child(5) > a {
+  background-image: url(../images/icons/doctor.png);
+}
+header > nav > ul > li:nth-child(6) > a {
+  background-image: url(../images/icons/crover.png);
+}
+header > nav > ul > li:nth-child(7) > a {
+  background-image: url(../images/icons/tell.png);
+}
+
+header >nav > ul > li.active > a {
+  -webkit-filter: invert(100%);
+  /*color: #7b4741;*/
+  background-color: #fff;
+  border-radius: 5px;
+}
+header >nav > ul > li.active::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icons/ya.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  margin: -80px 120px 0;
+  /*-webkit-filter: invert(100%);*/
+}
+
+footer::before {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 100%;
+  margin-top: -95px;
+  background-image: url(../images/footer2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-color: transparent;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3em;
+  width: 100%;
+  background: #333631;
+  z-index: 100;
+  color: #aaa;
+}
+footer > p {
+  margin-top:6px;
+  text-align: center;
+}
+footer > div {
+  position:fixed;
+  bottom: 2.5em;
+  right: 12px;
+  background: #333631;
+  padding: 12px;
+  border-radius: 100%;
+}
+
+footer > div > a {
+  display: inline-block;
+  width: 70px;
+  height: 0;
+  padding-top: 70px;
+  background-image: url(../images/icons/ya3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:right top;
+  vertical-align: center;
+  overflow: hidden;
+}
+
+/*トップページ*/
+main {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 250px);
+  color: #fff;
+  font-size: 120%;
+  line-height: 1.5em;
+  margin-bottom: 200px;
+}
+
+main > section > div > h1{
+  background-image: url(../images/icons/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 300px;
+  width: 500px;
+  font-size: 0;
+  margin: 12px;
+}
+
+main > section > div:first-child {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 12px
+}
+
+main > section > p {
+  text-align: center;
+  color: rgba(0,0,0,.2);
+  padding: 3px 0;
+  margin-bottom: 12px;
+  text-shadow: 5px 5px 5px #333631, 7px 7px 7px #333631;
+}
+
+main > section > p:nth-of-type(1) {
+  animation: itemappear 1s 1s;
+  animation-fill-mode: forwards;
+}
+main > section > p:nth-of-type(2) {
+  animation: itemappear 1s 1.5s;
+  animation-fill-mode: forwards;
+}
+main > section > p:nth-of-type(3) {
+  animation: itemappear 1s 2s;
+  animation-fill-mode: forwards;
+}
+main > section > p:nth-of-type(4) {
+  animation: itemappear 1s 2.5s;
+  animation-fill-mode: forwards;
+}
+main > section > p:nth-of-type(5) {
+  animation: itemappear 1s 3s;
+  animation-fill-mode: forwards;
+}
+main > section > p > a{
+  background-image: url(../images/icons/ya2.png);
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 2em;
+  padding-top: 100px;
+  padding-bottom: 6px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 80%;
+  text-align: center;
+  margin: 12px auto;
+  color: #fff;
+  animation: clickhere 1s 3s infinite;
+  opacity:0.2;
+  color: #000 !important;
+}
+main > section > p > a:hover {
+  animation-play-state: paused;
+  opacity:1;
+}
+@keyframes clickhere {
+  0%{opacity:0.2;}
+  50%{opacity:1;}
+  100%{opacity:0.2;}
+}
+
+@keyframes itemappear {
+  0%{
+    color: rgba(0,0,0,.2);
+    background: transparent;
+  }
+  100%{
+    color: rgba(255,255,255,1);
+    background: rgba(0,0,0,.5);
+  }
+}
+
+body#index #contents {
+  position:absolute;
+  top: 1000px;
+  left:0;
+  background: #f8f4e6;
+  z-index: -20;
+  padding-left: 230px;
+  width: calc(100% - 230px);
+  padding-top: 2em;
+  padding-bottom: 200px;
+  overflow: hidden;
+}
+
+body#index #header {
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width:100%;
+  height: 1em;
+  background: #333631;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+body#index #header.visible {
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+/*トップページ*/
+ 
+/*ベースページ*/
+#contents {
+    z-index: 10;
+  padding-left: 230px;
+  width: calc(100% - 230px);
+  padding-top: 2em;
+  padding-bottom: 200px;
+  overflow: hidden;
+  background: #f8f4e6;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 1em;
+  background: #333631;
+  z-index: 100;
+}
+
+#main {
+  float: left;
+  width: 65%;
+}
+
+#main > div:first-child > p:last-child {
+  text-align: right;
+}
+
+#main >div {
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid #333631;
+  border-radius: 5px;
+  background: #fff;
+}
+
+#main > div h2 {
+  border-bottom: 1px dotted #333631;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-bottom: 12px;
+}
+#main > div > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: underline;
+  font-weight: normal;
+}
+#main > div > ul > li time{
+  padding-right: 3em;
+}
+
+#main > div > table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#main > div > table th,
+#main > div > table td {
+  border: 1px solid gray;
+  padding:6px;
+  vertical-align: middle;
+}
+#main > div > table th{
+  background: #cee4ae;
+}
+#main > div > table th:not(:first-child),
+#main > div > table td:not(:first-child) {
+  width: 50px;
+}
+
+#main >div {
+  overflow: hidden;
+}
+
+#main #map {
+  box-sizing: border-box;
+  width: 65%;
+  height: 300px;
+  float: left;
+}
+
+#main #map ~ div {
+  box-sizing: border-box;
+  width: 35%;
+  float: right;
+  padding-left: 12px;
+}
+
+aside {
+  float: left;
+  width: 35%;
+  z-index: 100;
+}
+
+aside > div {
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid #333631;
+  border-radius: 5px;
+  background: #fff;
+}
+
+aside > div  > h2 {
+  border-bottom: 1px dotted #333631;
+}
+aside > div:first-child >p:first-child{
+  font-weight: bold;
+  border-bottom: 1px dotted gray;
+}
+aside > div:first-child >p:last-child{
+  text-align: center;
+  font-size: 180%;
+  line-height: 1.5em;
+}
+aside > div:nth-child(2) > p {
+  overflow: hidden;
+}
+aside > div:nth-child(2) a {
+  display:table-cell;
+  line-height: 3em;
+  float: left;
+  width: 100%;
+}
+aside > div:nth-child(2) a:hover {
+  -webkit-filter: invert(50%);
+}
+aside > div:nth-child(2) a::after{
+  content: "";
+  display:table-cell;
+  height: 0;
+  width: 40px;
+  padding-top: 40px;
+  background-image: url(../images/icons/ya2.png);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-filter: invert(100%);
+  transform: rotateZ(-90deg);
+  overflow: hidden;
+  float: right;
+}
+aside >div > dl {
+  margin-top: 1em;
+  border: 1px solid #333631;
+  border-radius: 6px;
+  padding: 1em;
+}
+aside > div > dl > div {
+  overflow: hidden;
+}
+aside >div > dl > div > div {
+  float: left;
+}
+aside > div >dl > dt {
+  margin-top: -2em;
+  /*margin-left: 1em;*/
+  display: inline-block;
+  width: 6em;
+  text-align: center;
+  background: #fff;
+}
+aside > div > dl > div > div> dd {
+  padding-left: 1em;
+}
+aside > div > dl > div > dd:last-child {
+  float:right;
+}
+aside > div > dl > div > dd:last-child a {
+  display: block;
+  height: 0;
+  width: 40px;
+  padding-top: 40px;
+  background-image: url(../images/icons/ya2.png);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-filter: invert(100%);
+  transform: rotateZ(-90deg);
+  overflow: hidden;
+}
+aside > div > dl > div > dd:last-child a:hover {
+  -webkit-filter: invert(50%);
+}
+aside > div:nth-child(3) {
+  min-height: 12em;
+}
+/*ベースページ*/
+
+/*お知らせページ*/
+#main > div > dl {
+  margin: 12px;
+}
+#main > div > dl > dt {
+  margin: 24px 0;
+  font-size: 150%;
+  line-height: 1.5em;
+}
+#main > div > dl > dt > time {
+  font-size: 60%;
+  line-height: 1.5em;
+}
+
+#main > div > dl > dd {
+   border-bottom: 1px solid gray;
+   margin-top: 12px;
+   padding: 6px 6px 32px;
+ }
+
+/*お知らせページ*/
+
+/*当院について*/
+#stage {
+    position: relative;
+    width: 600px;
+    height:338;
+    margin: 0 auto;
+}
+#photo1,#photo2,#photo3,#photo4 {
+    position: absolute;
+    width: 600px;
+    height: 338px;
+}
+#photo1 img,#photo2 img,#photo3 img,#photo4 img {
+    opacity:0;
+    -moz-animation: imgTrans 24s infinite;
+    -webkit-animation: imgTrans 24s infinite;
+    animation: imgTrans 24s infinite;
+}
+#photo1 img {
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+#photo2 img {
+    -moz-animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+#photo3 img {
+    -moz-animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
+}
+#photo4 img{
+    -moz-animation-delay: 18s;
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s;
+}
+
+#frame {
+    width: 600px;
+    height: 338px;
+    position: relative;
+    overflow: hidden;
+}
+@-webkit-keyframes imgTrans {
+ 0% { opacity:0; }
+ 5% { opacity:1; }
+ 25% { opacity:1; }
+ 30% { opacity:0; } 
+ 100% { opacity:0; }
+}
+@-moz-keyframes imgTrans {
+ 0% { opacity:0; }
+ 5% { opacity:1; }
+ 25% { opacity:1; }
+ 30% { opacity:0; } 
+ 100% { opacity:0; }
+}
+@keyframes imgTrans {
+ 0% { opacity:0; }
+ 5% { opacity:1; }
+ 25% { opacity:1; }
+ 30% { opacity:0; } 
+ 100% { opacity:0; }
+}
+
+#main >div h3{
+  font-size: 120%;
+  line-height: 1.5em;
+  border-bottom: 1px dotted gray;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+#fig {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+#fig > figure {
+  width: 30%;
+}
+#fig > figure > figcaption > span {
+  color: #432f2f;
+  font-weight: bold;
+}
+#fig > figure > img {
+  width: 100%;
+}
+/*当院について*/
+
+/*医師紹介*/
+#doctor #main > div:first-of-type > div:first-of-type {
+  float: right;
+  width: 35%;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  overflow: hidden;
+}
+#doctor #main > div > div:first-of-type > img{
+  width: 100%;
+}
+#doctor #main > div > div > span {
+  display: block;
+  line-height: 2em;
+  font-size: 120%;
+}
+#doctor #main > div > div:nth-of-type(3) {
+  margin-top: 32px;
+  clear:both;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+#doctor #main > div > div:nth-of-type(3) > dl > dt{
+  font-size: 120%;
+  border-bottom: 1px dotted gray;
+}
+/*医師紹介*/
+
+/*診療について*/
+#care #main div dl > dt {
+  background: #cee4ae;
+  border:1px solid gray;
+  border-bottom: none;
+  padding:6px;
+  font-size: 120%;
+  line-height: 1.5em;
+}
+#care #main div dl > dd {
+  background: transparent;
+  border:1px solid gray;
+  padding:6px;
+}
+#care #main div dl > dd:not(:last-child) {
+  border-bottom: none;
+}
+/*診療について*/
+
+/*予約*/
+#reserve #main p {
+  margin-bottom: 1em;
+}
+
+#contact {
+  display: none;
+}
+#book {
+  display: none;
+}
+#contact.checked {
+  display: block;
+}
+#book.checked {
+  display: block;
+}
+#contact textarea {
+  width: 80%;
+  height: 10em;
+  overflow: scroll;
+}
+#re_time .none{
+  display: none;
+}
+
+/*予約*/
+
+@media screen and (max-width: 1080px) {
+  #contents {
+    padding-left: 0;
+    padding-bottom: 0;
+    width:100%;
+  }
+  #stage,#frame,#photo1,#photo2,#photo3,#photo4{
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+  }
+  #photo1 img, #photo2 img, #photo3 img, #photo4 img {
+    width: 100%;
+  }
+  #fig > figure {
+    width: 45%;
+  }
+    header > nav {
+    transition: all 1s;
+    left: -250px;
+    background: #f8f4e6;
+  }
+  header > nav.visible {
+    left: 0;
+    background: #f8f4e6;
+  }
+  header > nav > ul > li > a {
+    padding: 25px 0 25px 50px;
+    background-position: left center;
+  }
+  header > nav > ul > li.active::after {
+    content:none;
+  }
+
+  #head_menu {
+    width: 60px;
+    height:60px;
+    background-image: url(../images/icons/ya2.png);
+    background-color: #333631;
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  /*-webkit-filter: invert(100%);*/
+    transform: rotateZ(-90deg);
+    overflow: hidden;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transition: all 1s;
+  }
+  #head_menu.visible {
+    transform: rotateZ(90deg);
+    border-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+    /*トップページ*/
+  main {
+    position:static;
+  }
+  main > section > div > h1 {
+    width: 95vw;
+  }
+  body#index #contents {
+    position: static;
+    padding-left: 0;
+    padding-bottom: 0;
+    width:100%;
+  }
+  body#index header > nav {
+    transition: all 1s;
+    left: -250px;
+    background: #f8f4e6;
+  }
+  body#index header > nav.visible {
+    left: 0;
+    background: #f8f4e6;
+  }
+}
+
+@media screen and (max-width: 600px){
+  footer {
+    position: static;
+  }
+  footer::before {
+    content: none;
+  }
+  footer > div {
+    right: 0;
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  footer > div > a{
+    width: 40px;
+    padding-top: 40px;
+  }
+
+  #contents {
+    padding-left: 0;
+    padding-bottom: 0;
+    width:100%;
+  }
+  #main {
+    float: none;
+    width: 100%;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+  #main #map ~ div {
+    float: none;
+  }
+  #main #map {
+    width: 100%;
+    float: none;
+  }
+  #main #map ~ div {
+    float: none;
+    width: 100%;
+  }
+  #stage,#frame,#photo1,#photo2,#photo3,#photo4{
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+  }
+  #photo1 img, #photo2 img, #photo3 img, #photo4 img {
+    width: 100%;
+  }
+  #fig > figure {
+    width: 45%;
+  }
+
+  header > nav {
+    transition: all 1s;
+    left: -250px;
+    background: #f8f4e6;
+  }
+  header > nav.visible {
+    left: 0;
+    background: #f8f4e6;
+  }
+  header > nav > ul > li > a {
+    padding: 25px 0 25px 50px;
+    background-position: left center;
+  }
+  header > nav > ul > li.active::after {
+    content:none;
+  }
+
+  #head_menu {
+    width: 60px;
+    height:60px;
+    background-image: url(../images/icons/ya2.png);
+    background-color: #333631;
+    background-size: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  /*-webkit-filter: invert(100%);*/
+    transform: rotateZ(-90deg);
+    overflow: hidden;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transition: all 1s;
+  }
+  #head_menu.visible {
+    transform: rotateZ(90deg);
+    border-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  #main::before {
+    content: "";
+    display: block;
+    background-image: url(../images/icons/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 95vw;
+    padding-top: 200px;
+    margin: 0 auto;
+  }
+  /*トップページ*/
+  main {
+    position:static;
+  }
+  main > section > div > h1 {
+    width: 95vw;
+  }
+  body#index #contents {
+    position: static;
+    padding-left: 0;
+    padding-bottom: 0;
+    width:100%;
+  }
+  body#index header > nav {
+    transition: all 1s;
+    left: -250px;
+    background: #f8f4e6;
+  }
+  body#index header > nav.visible {
+    left: 0;
+    background: #f8f4e6;
+  }
+}
