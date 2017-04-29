@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, address {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align:bottom;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article, header, footer, aside, figure, figcaption, nav, section, main {
+  display:block;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1.8;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+address {
+  font-style: normal;
+}
+a:hover img {
+  opacity: .7;
+}
+img {
+  max-width: 100%;
+}
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+/* 適宜変更▼▼▼ */
+html {
+  font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "游ゴシック", "YuGothic", "メイリオ", "Meiryo", sans-serif; /*ゴシック*/
+  color: #512e23;
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:active {
+  text-decoration: underline;
+  color: inherit;
+}
+/* common */
+.mincho {
+  font-family: "游明朝, YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; /*明朝*/
+}
+.gosic {
+  font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "游ゴシック", "YuGothic", "メイリオ", "Meiryo", sans-serif; /*ゴシック*/
+}
+.copyright {
+  padding: 2em 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #a98d4d;
+}
+.copyright .logo{
+  margin-bottom: 1em;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="theme-color" content="#ffcce5">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/slider-pro.min.css">
+<title>フォントの話</title>
+<style>
+<!--
+body {
+  max-width: 1200px;
+  padding: 0 5%;
+  margin : 0 auto;
+}
+section {
+  margin-bottom: 30px;
+}
+.mainTtl {
+  font-weight: bold;
+  background: #eee;
+  padding: 1em;
+  border: 3px solid #ccc;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+.subTtl {
+  border-left: 3px solid #e44b4b;
+  padding-left: 10px;
+  position: relative;
+}
+.subTtl::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  bottom: 0;
+  width: 3px;
+  background: #aaa;
+}
+#gnav ul {
+  display: table;
+}
+#gnav ul li {
+  display: table-cell;
+  vertical-align: middle;
+}
+#gnav ul li a {
+  display: table-cell;
+  text-align: center;
+  padding: 1em;
+}
+#gnav ul li a:hover {
+  text-decoration: none;
+}
+
+#font ul {
+  font-size: 20px;
+}
+#font ul li {
+  margin-bottom: 1em;
+}
+#font ul li h2 {
+  background: rgba(183, 171, 167, .2);
+}
+#font ul li h2 span {
+  font-size: 15px;
+  color: #b7aba7;
+  display: block;
+}
+/*明朝*/
+@font-face {
+  font-family: "kokumarumincho";
+  src: url("webfont/mincho/kokumaru/kokumr_web.eot") format("eot"),url(webfont/mincho/kokumaru/kokumr_web.woff) format("woff");
+}
+@font-face {
+  font-family: "hannari";
+  src: url("webfont/mincho/hannari/Hannari.eot") format("eot"),url(webfont/mincho/hannari/Hannari.woff) format("woff");
+}
+@font-face {
+  font-family: "hare";
+  src: url("webfont/mincho/hare/harenosora.eot") format("eot"),url(webfont/mincho/hare/harenosora.woff) format("woff");
+}
+@font-face {
+  font-family: "ipa";
+  src: url("webfont/mincho/ipa/ipaexm.eot") format("eot"),url(webfont/mincho/ipa/ipaexm.woff) format("woff");
+}
+@font-face {
+  font-family: "utsukushi";
+  src: url("webfont/mincho/UtsukushiMincho-FONT/UtsukushiFONT.eot") format("eot"),url(webfont/mincho/UtsukushiMincho-FONT/UtsukushiFONT.woff) format("woff");
+}
+#font .web .font-mincho li:nth-child(1){
+  font-family: "kokumarumincho", serif;
+}
+#font .web .font-mincho li:nth-child(2){
+  font-family: "hannari", serif;
+}
+#font .web .font-mincho li:nth-child(3){
+  font-family: "hare", sans-serif;
+}
+#font .web .font-mincho li:nth-child(4){
+  font-family: "ipa", sans-serif;
+}
+#font .web .font-mincho li:nth-child(5){
+  font-family: "utsukushi", sans-serif;
+}
+
+/*ゴシック*/
+@font-face {
+  font-family: "corporateB";
+  src: url("webfont/gosic/corporate-logoBold/logotypejp_mp_b_1.eot") format("eot"),url(webfont/gosic/corporate-logoBold/logotypejp_mp_b_1.woff) format("woff");
+}
+@font-face {
+  font-family: "corporateM";
+  src: url("webfont/gosic/corporate-logoMid/logotypejp_mp_m_1.eot") format("eot"),url(webfont/gosic/corporate-logoMid/logotypejp_mp_m_1.woff) format("woff");
+}
+@font-face {
+  font-family: "KFhimaji";
+  src: url("webfont/gosic/Kfhimaji/KFhimaji.eot") format("eot"),url(webfont/gosic/Kfhimaji/KFhimaji.woff) format("woff");
+}
+@font-face {
+  font-family: "KoruriR";
+  src: url("webfont/gosic/koruri/Koruri-Regular.eot") format("eot"),url(webfont/gosic/koruri/Koruri-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "LightNovelPOP";
+  src: url("webfont/gosic/LightNovelPop/LightNovelPOP.eot") format("eot"),url(webfont/gosic/LightNovelPop/LightNovelPOP.woff) format("woff");
+}
+@font-face {
+  font-family: "nicoca";
+  src: url("webfont/gosic/nikomoji/nicoca_v1.eot") format("eot"),url(webfont/gosic/nikomoji/nicoca_v1.woff) format("woff");
+}
+@font-face {
+  font-family: "riipopkr";
+  src: url("webfont/gosic/riipopkr/RiiPopkkR.eot") format("eot"),url(webfont/gosic/riipopkr/RiiPopkkR.woff) format("woff");
+}
+@font-face {
+  font-family: "tanukiMagic";
+  src: url("webfont/gosic/tanukiMagic/TanukiMagic.eot") format("eot"),url(webfont/gosic/TanukiMagic/TanukiMagic.woff) format("woff");
+}
+
+
+#font .web .font-gosic li:nth-child(1){
+  font-family: "corporateB", serif;
+}
+#font .web .font-gosic li:nth-child(2){
+  font-family: "corporateM", serif;
+}
+#font .web .font-gosic li:nth-child(3){
+  font-family: "KFhimaji", serif;
+}
+#font .web .font-gosic li:nth-child(4){
+  font-family: "KoruriR", serif;
+}
+#font .web .font-gosic li:nth-child(5){
+  font-family: "LightNovelPOP", serif;
+}
+#font .web .font-gosic li:nth-child(6){
+  font-family: "nicoca", serif;
+}
+#font .web .font-gosic li:nth-child(7){
+  font-family: "riipopkr", serif;
+}
+#font .web .font-gosic li:nth-child(8){
+  font-family: "tanukiMagic", serif;
+}
+
+-->
+</style>
+</head>
+<body>
+<section id="font">
+  <h1 class="mainTtl">フォント</h1>
+  <p>文字サイズ：20px　文字の太さ：通常</p>
+  <section class="normal">
+    <h2>os搭載フォント</h2>
+    <div>
+      <span class="px10"></span>
+      <span class="px20"></span>
+      <span class="px30"></span>
+    </div>
+    <ul>
+      <li>
+        <h2>Mac:ヒラギノ明朝 ProN W3 / Win:MS 明朝<span>font-family:'ヒラギノ明朝 ProN W3','HiraMinProN-W3','MS 明朝';</span></h2>
+        <p style="font-family: 'ヒラギノ明朝 ProN W3','HiraMinProN-W3','MS 明朝',sans-serif;font-weight: normal;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:游明朝体 ミディアム / Win:游明朝<span>font-family:'游明朝', YuMincho,serif;</span></h2>
+        <p style="font-family:'游明朝', YuMincho,sans-serif;font-weight: normal;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:凸版文久明朝 Pr6N R / Win:HG明朝<span>font-family:ToppanBunkyuMinchoPr6N-Regular,'凸版文久明朝 Pr6N R','HG明朝E';</span></h2>
+        <p style="font-family:ToppanBunkyuMinchoPr6N-Regular,'凸版文久明朝 Pr6N R','HG明朝E',sans-serif;font-weight: normal;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:凸版文久見出し明朝 StdN EB / Win:HG明朝<span>font-family:ToppanBunkyuMinchoPr6N-Regular,'凸版文久明朝 Pr6N R','HG明朝E';</span></h2>
+        <p style="font-family:ToppanBunkyuMidashiMinchoStdN-ExtraBold,'凸版文久見出し明朝 StdN EB','HG明朝E',sans-serif;font-weight: normal;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:ヒラギノ角ゴシック W0 / Win:メイリオ<span>font-family:'Hiragino Sans','ヒラギノ角ゴシック','Hiragino Kaku Gothic Pro','ヒラギノ角ゴシック',メイリオ,Meiryo;</span></h2>
+        <p style="font-family:'Hiragino Sans','ヒラギノ角ゴシック',メイリオ,Meiryo,serif;font-weight: 100;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:ヒラギノ丸ゴ Pro / Win:HG 丸ゴシック M-Pro<span>font-family:HiraMaruProN-W4,'Hiragino Maru Gothic ProN','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO';</span></h2>
+        <p style="font-family:HiraMaruProN-W4,'Hiragino Maru Gothic ProN','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO',serif;font-weight: bold;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:游ゴシック / Win:游ゴシック<span>font-family:YuGo-Medium,'YuGothic';</span></h2>
+        <p style="font-family:YuGo-Medium,'YuGothic','游ゴシック',serif;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+    </ul>
+  </section>
+  <section class="web">
+    <h2>webフォント</h2>
+    <p>Androidではほとんどのバージョンで明朝体が表示できません。Androidにも明朝を適用したければwebフォントが必須です。</p>
+    <p>日本語のwebフォントはサイズが大きく読み込み速度がかかります。そのため、漢字を第一水準に絞っています。</p>
+    <section>
+      <h3>明朝</h3>
+      <ul class="font-mincho">
+        <li><span>こくまる</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>はんなり</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>はれのそら</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>IPA</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>うつくし</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <!-- <li><span>明朝</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li> -->
+      </ul>
+    </section>
+    <section>
+      <h3>ゴシック</h3>
+      <ul class="font-gosic">
+        <li><span>コーポレートロゴBold</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>コーポレートロゴMid</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>KFひまじ</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>こるりR</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>ラノベpop</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>ニコモジ</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>りいぽっぷ</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+        <li><span>たぬきマジック</span>あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります</li>
+      </ul>
+    </section>
+  </section>
+</section>
+</body>
+</html>
