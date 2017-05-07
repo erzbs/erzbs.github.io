@@ -141,6 +141,19 @@ section {
   src: url("webfont/gosic/tanukiMagic/TanukiMagic.eot") format("eot"),url(webfont/gosic/TanukiMagic/TanukiMagic.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'MyYuGothicM';
+  font-weight: normal;
+  src: local('YuGothic-Medium'), /* PostScript Name = localの正式な指定方法 */
+  local('Yu Gothic Medium'),     /* PostScript Nameを認識できないChrome用にFull Nameを指定 */
+  local('YuGothic-Regular');     /* 游ゴシックMediumが存在しないWindows8.1用 */
+}
+@font-face {
+  font-family: 'MyYuGothicM';
+  font-weight: bold;
+  src: local('YuGothic-Bold'), /* PostScript Name = localの正式な指定方法 */
+  local('Yu Gothic');          /* PostScript Nameを認識できないChrome用にFull Nameを指定 */
+}
 
 #font .web .font-gosic li:nth-child(1){
   font-family: "corporateB", serif;
@@ -223,6 +236,10 @@ section {
       <li>
         <h2>Mac:游ゴシック / Win:游ゴシック<span>font-family:YuGo-Medium,'YuGothic';</span></h2>
         <p style="font-family:YuGo-Medium,'YuGothic','游ゴシック',serif;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
+      </li>
+      <li>
+        <h2>Mac:游ゴシック / Win:游ゴシック<span>font-family:YuGo-Medium,'YuGothic';</span></h2>
+        <p style="font-family:'MyYuGothicM','YuGothic','游ゴシック',serif;">あいうえおＡＢＣＤＥａｂｃｄｅ　ABCDEabcde　フォントは本当にたくさん種類があります。</p>
       </li>
     </ul>
   </section>
