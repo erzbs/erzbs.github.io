@@ -1,49 +1,115 @@
 @charset "utf-8";
-/*********************/
-/*共通設定*/
-/*********************/
 html {
+	overflow-y: scroll;
+}
+body {
+	width: 1000px;
+	margin: 1em auto;
+}
+.nav {
+	margin-bottom: 1em;
 }
 
-.h1 {
+textarea {
+	width: 100%;
+}
+
+input {
+	margin-left: 1em;
+}
+
+input[type="number"] {
+	width: 3em;
+}
+
+form > ul > li {
+	padding: 2em 40px;
+	margin: 0 -40px;
+	text-indent: 0;
+	list-style:none;
+    position: relative;
+}
+
+form > ul > li:nth-child(2n+1) {
+	background: rgba(00,123,255,.1);
+}
+.outmemo {
+	display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    margin: 10px;
+    opacity: .7;
+    background: #96b3ef;
+    transition: 0;
+    overflow-y: scroll;
+    max-width: 50%;
+    line-height: 1.7;
+}
+.outmemo:hover {
+	opacity: 1;
+}
+.outmemo:active {
+    opacity: 0;
+    transition: .3s ease-in-out all;
+}
+.outmemo::before {
+	content: "出力";
+	display: block;
+	text-align: center;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 50, .5);
+  border-radius: 10px;
+  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+.outmemo table th,
+.outmemo table td {
+	border: 1px solid;
+	padding: 0 .5em;
+	text-align: center;
+	font-weight: normal;
+}
+.outmemo table th {
+	background: rgba(0,0,0,.3);
+}
+.outnum {
+	font-size: .9em;
+	vertical-align: bottom;
+	margin-left: 1em;
+	opacity: .6;
+	color: red;
+}
+.outnum::before {
+	font-size: .9em;
+	content: "ー";
+	vertical-align: bottom;
+}
+
+.inauto,
+input:disabled {
+	background: #eee;
+}
+
+.inputtable {
+	width: 100%;
+	font-size: 80%;
+}
+.inputtable tr td,
+.inputtable tr th {
+	border: 1px solid;
+	padding: .4em;
 
 }
 
-.h2 {
-
-}
-
-.h3 {
-
-}
-
-.h4 {
-
-}
-
-.h5 {
-
-}
-
-.h6 {
-  
-}
-/*********************/
-/*レスポンシブ999px*/
-/*********************/
-
-@media screen and (max-width: 999px){
-}
-/*********************/
-/*レスポンシブ760px*/
-/*********************/
-
-@media screen and (max-width: 760px){
-}
-/*********************/
-/*レスポンシブ540px*/
-/*********************/
-
-@media screen and (max-width: 540px){
-
+.inputtable tr:nth-child(2n+1) {
+	background: #eee;
 }
