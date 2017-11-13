@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>医療関連感染症情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+ 	<header>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+      <ul class="nav nav-tabs" id="nav02">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="05.html">ASP情報</a></li>
+      </ul>
+    </heaeder>
+    <h1>医療関連感染症情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">医療関連感染症</h2>
+          <p><label>JHAISファイル取り込み<input type="file" name="data_jhais"></label></p> 
+          <ul>
+            <li>
+              <h3 class="h5">デバイス部門（ICU・急性期一般病棟部門）<span class="outnum">①</span></h3>
+              <table class="inputtable">
+                <tbody>
+                  <tr>
+                    <td rowspan="8">病棟１</td>
+                    <td colspan="7">延べ入院患者日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">延べ医療器具使用日数</td>
+                    <td>中心ライン使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>尿道カテーテル使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>人口呼吸器使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">医療器具関連感染発生件数</td>
+                    <td>検査確認血流感染LCBI<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>臨床的敗血症CSEP<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>尿道カテーテル関連尿路感染CAUTI<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>人工呼吸器関連肺炎VAP<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="8">病棟２</td>
+                    <td colspan="7">延べ入院患者日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">延べ医療器具使用日数</td>
+                    <td>中心ライン使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>尿道カテーテル使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>人口呼吸器使用日数<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">医療器具関連感染発生件数</td>
+                    <td>検査確認血流感染LCBI<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>臨床的敗血症CSEP<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>尿道カテーテル関連尿路感染CAUTI<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td>人工呼吸器関連肺炎VAP<input type="number" min="0">日</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">～</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">登録した病棟が並ぶ</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">～</td>
+                  </tr>
+                </tbody>
+              </table><br><br>
+            </li>
+            <li>
+              <h3 class="h5">デバイス部門（NICU部門）</h3>
+              <table class="inputtable">
+                <thead>
+                  <tr>
+                    <th colspan="3"></th>
+                    <th>≦750g</th>
+                    <th>751-1000g</th>
+                    <th>1001-1500g</th>
+                    <th>1501-2500g</th>
+                    <th>＞2500g</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3">NICU延べ入院患者数</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">延べ医療器具使用日数</td>
+                    <td colspan="2">中心ライン（臍カテーテルは中心ラインとみなす）</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">人工呼吸器</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">感染患者数</td>
+                    <td rowspan="2">中心ライン関連血流感染　CLABSI</td>
+                    <td>検査確認された血流感染　LCBI</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                  <tr>
+                    <td>臨床的敗血症　CSEP</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">人工呼吸器関連肺炎　VAP</td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                    <td><input type="number" min="0"></td>
+                  </tr>
+                </tbody>
+              </table><br><br>
+            </li>
+            <li>
+              <h3 class="h5">SSI部門</h3>
+              <span style="color:red;">入力データが複雑なため手入力なし、もしくは手術手技ごとのSSI発生数の症例数入力？</span>
+              <br>JHAISのSSI部門（NISDM-SSI3）またはJANISのSSI部門に登録し、入力データを作成してアップロード<br><span style="color:red;">どちらも対応するのか？どちらかだけか？</span>
+              <table class="inputtable">
+                <thead>
+                  <tr>
+                    <th>手術手技</th>
+                    <th>SSI発生件数</th>
+                    <th>症例数</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AAA</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>AAE</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>AMP</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>APPY</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>～</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>手術手技が続く</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>～</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>VSHN</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                  <tr>
+                    <td>XLAP</td>
+                    <td><input type="number" min="0">件</td>
+                    <td><input type="number" min="0">件</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+<!--           <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線</td>
+                  <td>感染率（病床種類別）</td>
+                  <td>平均感染率</td>
+                </tr>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線＋箱ひげ</td>
+                  <td>感率</td>
+                  <td>箱ひげ図</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> --><!-- .outmemo -->
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

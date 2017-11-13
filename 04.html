@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微生物関連情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+ 	<header>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+      <ul class="nav nav-tabs" id="nav02">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="05.html">ASP情報</a></li>
+      </ul>
+    </heaeder>
+    <h1>微生物関連情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">薬剤耐性菌等の検出状況</h2>
+          <p><label>JANIS還元データ取り込み<input type="file" name="data_janis"></label></p>
+        </li>
+        <li>
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2">耐性菌名</th>
+                <th rowspan="2">総数</th>
+                <th rowspan="2">新規</th>
+                <th rowspan="2">院内</th>
+                <th colspan="3">1000延べ在院日数換算総数総数</th>
+              </tr>
+              <tr>
+                <th>総数</th>
+                <th>新規</th>
+                <th>院内</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S. aureus</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. epidermidis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. pneumoniae</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecalis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecium</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. coli</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>K. pneumoniae</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>Enterobacter spp.</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. marcescens</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecalis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>P. aeruginosa</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>Acinetobacter spp.</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>K. oxytoca</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>P. mirabilis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MRSA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>VRSA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>VRE</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>PRSP</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MDRP</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>２剤耐性緑膿菌<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MDRA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>２剤耐性アシネトバクター<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>CRE</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>カルバペネム耐性緑膿菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性腸内細菌科細菌<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性肺炎桿菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性大腸菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>フルオロキノロン耐性大腸菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="outmemo">
+<pre>
+現行RICSSと同じ
+</pre>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h3 class="h5">MRSA/S. aureus比（新規）</h3>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>S. aureus</th>
+                <th>MRSA</th>
+                <th>MRSA/Sa率</th>
+                <th>検体提出患者数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>血液</th>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0">％</td>
+                <td><input type="number" min="0">人</td>
+              </tr>
+              <tr>
+                <th>髄液</th>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0">％</td>
+                <td><input type="number" min="0">人</td>
+              </tr>
+              <tr>
+                <th>関節液</th>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0">％</td>
+                <td><input type="number" min="0">人</td>
+              </tr>
+              <tr>
+                <th>胸水</th>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0">％</td>
+                <td><input type="number" min="0">人</td>
+              </tr>
+              <tr>
+                <th>入院全材料</th>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0">％</td>
+                <td><input type="number" min="0">人</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="outmemo">
+<pre>
+現行RICSSと同じ
+</pre>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <ul>
+            <li>血液培養（小児１５歳未満）
+              <ul>
+                <li>血液培養提出数<input type="number" min="0">セット</li>
+                <li>１セットのみの血液培養提出数<input type="number" min="0">セット</li>
+                <li>血液培養陽性数<input type="number" min="0">セット</li>
+                <li>汚染検体数<input type="number" min="0">セット</li>
+              </ul>
+            </li>
+            <li>血液培養（成人１５歳以上）
+              <ul>
+                <li>血液培養提出数<input type="number" min="0">セット</li>
+                <li>１セットのみの血液培養提出数<input type="number" min="0">セット</li>
+                <li>血液培養陽性数<input type="number" min="0">セット</li>
+                <li>汚染検体数<input type="number" min="0">セット</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="outmemo">
+<pre>
+現行RICSSと同じ
+</pre>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+        <div style="opacity:.2">
+          <h2 class="h4">2剤耐性菌評価<span style="color:red">※上に結合</span></h2>
+          <ul>
+            <li>2剤耐性緑膿菌<input type="number" min="0">件/月</li>
+            <li>2剤耐性アシネトバクター<input type="number" min="0">件/月</li>
+          </ul>
+          <div class="outmemo">
+<pre>
+それぞれの耐性菌のJANISデータからの抽出方法は？
+4000  Pseudomonas sp.
+4001  Pseudomonas aeruginosa
+4011  Pseudomonas putida
+4012  Pseudomonas fluorescens
+4400  Acinetobacter sp.
+4401  Acinetobacter calcoaceticus
+4402  Acinetobacter baumannii
+4403  Acinetobacter lwoffii
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均件数</td>
+                </tr>
+                <tr>
+                  <td>折れ線</td>
+                  <td>検出割合</td>
+                  <td>平均検出割合</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </div>
+        </li>
+        <li>
+        <div style="opacity:.2">
+          <h2 class="h4">耐性菌・C. difficileの検出率<span style="color:red;">※上に結合</span></h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>MRSA</td>
+                <td><input type="number" min="0">件</td>
+                <td>（1000延べ在院日数換算<input type="number" min="0" disabled>件）</td>
+              </tr>
+              <tr>
+                <td>３世代セファロスポリン耐性腸内細菌科細菌</td>
+                <td><input type="number" min="0">件</td>
+                <td>（1000延べ在院日数換算<input type="number" min="0" disabled>件）</td>
+              </tr>
+              <tr>
+                <td>CRE</td>
+                <td><input type="number" min="0">件</td>
+                <td>（1000延べ在院日数換算<input type="number" min="0" disabled>件）</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均件数</td>
+                </tr>
+                <tr>
+                  <td>折れ線</td>
+                  <td>検出割合</td>
+                  <td>平均検出割合</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">血流感染症評価</h2>
+          <ul>
+            <li>主要な起因菌ごとの血流感染症数
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2">耐性菌名</th>
+                <th rowspan="2">総数</th>
+                <th rowspan="2">新規</th>
+                <th rowspan="2">院内</th>
+                <th colspan="3">1000延べ在院日数換算総数総数</th>
+              </tr>
+              <tr>
+                <th>総数</th>
+                <th>新規</th>
+                <th>院内</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S. aureus</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. epidermidis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. pneumoniae</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecalis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecium</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. coli</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>K. pneumoniae</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>Enterobacter spp.</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>S. marcescens</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>E. faecalis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>P. aeruginosa</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>Acinetobacter spp.</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>K. oxytoca</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>P. mirabilis</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MRSA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>VRSA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>VRE</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>PRSP</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MDRP</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>２剤耐性緑膿菌<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>MDRA</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>２剤耐性アシネトバクター<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>CRE</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>カルバペネム耐性緑膿菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性腸内細菌科細菌<span style="color:red;">＊順番確認</span></td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性肺炎桿菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>第三世代ｾﾌｧﾛｽﾎﾟﾘﾝ耐性大腸菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+              <tr>
+                <td>フルオロキノロン耐性大腸菌</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0">人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+                <td><input type="number" min="0" disabled>人</td>
+              </tr>
+            </tbody>
+          </table>
+            </li>
+          </ul>
+          <div class="outmemo">
+<pre>
+各菌に対して・・・
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>総数（1000延べ換算）</td>
+                  <td>総数平均</td>
+                </tr>
+                <tr>
+                  <td>折れ線</td>
+                  <td>新規人数（1000延べ換算）</td>
+                  <td>新規平均</td>
+                </tr>
+                <tr>
+                  <td>折れ線</td>
+                  <td>院内人数（1000延べ換算）</td>
+                  <td>院内平均</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </li>
+        <li>
+          <h2 class="h4">c. difficile感染症数評価</h2>
+          <ul>
+            <li>CDトキシン検査陽性検体数<sup>*</sup><input type="number" min="0">症例数/月<br>
+              検査方法:<label><input type="radio" name="q4-1">イムノクロマト法</label><label><input type="radio" name="q4-1">PCR法</label><label><input type="radio" name="q4-1">その他</label><br>
+              <sup>*</sup>非固形便（泥状便・軟便）を有する患者を対象とした検査に限る</li>
+          </ul>
+          <div class="outmemo">
+<pre>
+JANISデータからの取り込みは不可？
+検査法の割合を出したほうがいいのか？
+件数と症例数の違いは？
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>症例数</td>
+                  <td>平均症例数</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">血液培養評価</h2>
+          <ul>
+            <li>摂取した血液培養ボトルは培養を開始できる体制がある<br>
+              <label><input type="radio" name="q1-1">はい</label><label><input type="radio" name="q1-1">いいえ</label><span class="outnum">①</span></li>
+            <li>血液培養陽性時にグラム染色を実施する体制がある<br>
+              <label><input type="radio" name="q1-2">はい</label>
+              <select name="op01" id="op01">
+                <option value="op01_01">陽性後可能な限り早く実施</option>
+                <option value="op01_02">平日の業務時間内のみ実施</option>
+                <option value="op01_03">臨床検査技師勤務時間内のみ実施</option>
+              </select>
+              <label><input type="radio" name="q1-2">いいえ<span class="outnum">②</span></label>
+            </li>
+          </ul>
+          <div class="outmemo">
+<pre>
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線</td>
+                  <td>ー</td>
+                  <td>施設数？割合？</td>
+                </tr>
+                <tr>
+                  <td>②</td>
+                  <td>折れ線？100積み上げ折れ線？</td>
+                  <td>ー</td>
+                  <td>施設数？割合（はい選択項目含め）？</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

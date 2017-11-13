@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>感染症診療情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+ 	<header>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+      <ul class="nav nav-tabs" id="nav02">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="05.html">ASP情報</a></li>
+      </ul>
+    </heaeder>
+    <h1>感染症診療情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">感染症コンサルテーション</h2>
+          <ul>
+            <li>感染症コンサルテーション医師の人数<input class="" type="number" min="0">名<span class="outnum">①</span></li>
+            <li>感染症コンサルテーション医師のうち、感染症専門医の人数<input type="number" min="0">名<span class="outnum">②</span></li>
+            <li>感染症コンサルテーション件数（カルテ記載を行ったもの）<input type="number" min="0">件/月<span class="outnum">③</span><br>
+            ※ベッドサイドでの診療を行ったもの　内<input type="number" min="0">件/月<span class="outnum">④</span></li>
+          </ul>
+          <div class="outmemo">
+<pre>
+・割合など必要なし？
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線</td>
+                  <td>人数</td>
+                  <td>平均</td>
+                </tr>
+                <tr>
+                  <td>②</td>
+                  <td>折れ線</td>
+                  <td>人数</td>
+                  <td>平均</td>
+                </tr>
+                <tr>
+                  <td>③</td>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均</td>
+                </tr>
+                <tr>
+                  <td>④</td>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+
+        <li>
+          <h2 class="h4">細菌検査関連の診療評価</h2>
+          <ul>
+            <li>血液培養陽性例に感染症科・ICTでの監視<sup>*</sup>
+              <label><input type="radio" name="q1-3">有</label><label><input type="radio" name="q1-3">無</label><br>
+              <sup>*</sup>必要時の感染症コンサルトを含む
+            </li>
+          </ul>
+          <div class="outmemo">
+<pre>
+・自施設の情報は同一画面のどこかに表示？
+・血液培養陽性例とは？
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>ー</td>
+                  <td>施設数？割合？</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

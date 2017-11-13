@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASP情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+ 	<header>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+      <ul class="nav nav-tabs" id="nav02">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="05.html">ASP情報</a></li>
+      </ul>
+    </heaeder>
+    <h1>ASP情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">抗菌薬適正使用の取り組み</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>対象抗菌薬</th>
+                <th>介入状況</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>抗緑膿菌用ペニシリン系合剤</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>第４世代セファロスポリン</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>抗緑膿菌用第３世代セファロスポリン</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>カルバペネム系</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>グリコペプチド系抗菌薬</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>リネゾリド</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>ダプトマイシン</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>フルオロキノロン系静注薬</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>フルオロキノロン系経口薬</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>コリスチン</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>チゲサイクリン</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>抗真菌薬</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+              <tr>
+                <td>その他</td>
+                <td>
+                  <input type="checkbox">採用無
+                  <input type="checkbox">なし
+                  <input type="checkbox">PAF
+                  <input type="checkbox">許可制
+                  <input type="checkbox">届出制
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>100％積み上げ棒<br>or<br>100％g積み上げ折れ線</td>
+                  <td>ー</td>
+                  <td>割合</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>実施件数</th>
+                <th>開始患者件数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TDM(グリコペプチド)</td>
+                <td><input type="number" min="0">件/月</td>
+                <td><input type="number" min="0">件/月</td>
+              </tr>
+              <tr>
+                <td>TDM(アミノグリコシド)</td>
+                <td><input type="number" min="0">件/月</td>
+                <td><input type="number" min="0">件/月</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>実施割合</td>
+                  <td>平均実施割合</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">抗菌薬使用状況</h2>
+          <p><label>JACS還元データ取り込み<input type="file" name="data_jacs"></label></p> 
+          <table class="inputtable">
+            <thead>
+              <tr>
+                <th>系統</th>
+                <th>薬品名</th>
+                <th>商品名（代表例）</th>
+                <th>採用の有無</th>
+                <th>使用量</th>
+                <th>使用日数</th>
+              </tr>
+            </thead>
+            <tbody>
+<tr><td rowspan="9">アミノグリコシド</td><td>ストレプトマイシン</td><td>硫酸ストレプトマイシン注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>トブラマイシン</td><td>トブラシン注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ゲンタマイシン</td><td>ゲンタシン注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>カナマイシン</td><td>硫酸カナマイシン注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アミカシン</td><td>  ビクリン注射用、硫酸アミカシン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ジベカシン</td><td>パニマイシン注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>リボスタマイシン</td><td>ビスタマイシン筋注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>イセパマイシン</td><td>イセパシン注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ベカナマイシン</td><td>カネンドマイシン筋注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">テトラサイクリン</td><td>ミノサイクリン</td><td>点滴静注用ミノマイシン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>チゲサイクリン</td><td>タイガシル点滴静注用
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">リンコマイシン</td><td>クリンダマイシン</td><td>ダラシンＳ注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>リンコマイシン</td><td>リンコシン注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">マクロライド</td><td>エリスロマイシン</td><td>注射用エリスロシン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アジスロマイシン</td><td>ジスロマック点滴静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="8">ペニシリン</td><td>  アンピシリン</td><td>注射用ビクシリン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ピペラシリン</td><td>ペントシリン注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ベンジルペニシリン</td><td>  注射用ペニシリンＧカリウム</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アンピシリン/スルバクタム</td><td>ユナシンＳ静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ピペラシリン/タゾバクタム</td><td>タゾシン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ピペラシリン/タゾバクタム</td><td>ゾシン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アスポキシシリン</td><td>ドイル静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アンピシリン/クロキサシリン</td><td>注射用ビクシリンS</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">一世代ｾﾌｧﾛｽﾎﾟﾘﾝ</td><td>セファロチン</td><td>コアキシン注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セファゾリン</td><td>セファメジンα注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="4">二世代ｾﾌｧﾛｽﾎﾟﾘﾝ</td><td>セフォチアム</td><td>パンスポリン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフメタゾール</td><td>セフメタゾン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフミノクス</td><td>メイセリン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフブペラゾン</td><td>トミポラン/ケイペラゾン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="8">三世代ｾﾌｧﾛｽﾎﾟﾘﾝ</td><td>セフォタキシム</td><td>セフォタックス/クラフォラン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフタジジム</td><td>モダシン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフスロジン</td><td>タケスリン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフトリアキソン</td><td>ロセフィン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフメノキシム</td><td>ベストコール静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフォジジム</td><td>ノイセフ／ケニセフ</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフォペラゾン</td><td>セフォペラジン注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>スルバクタム/セフォペラゾン</td><td>スルペラゾン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="3">四世代ｾﾌｧﾛｽﾎﾟﾘﾝ</td><td>セフェピム</td><td>注射用マキシピーム</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフピロム</td><td>  ケイテン/ブロアクト</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>セフォゾプラン</td><td>ファーストシン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">オキサセフェム</td><td>フロモキセフ</td><td>フルマリン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ラタモキセフ</td><td>シオマリン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="2">モノバクタム</td><td>アズトレオナム</td><td>アザクタム注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>カルモナム</td><td>  アマスリン静注用1g</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="5">カルバペネム</td><td>メロペネム</td><td>メロペン点滴用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ドリペネム</td><td>フィニバックス点滴用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ビアペネム</td><td>オメガシン点滴用0.3g</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>パニペネム/ベタミプロン</td><td>カルベニン点滴用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>イミペネム/シラスタチン</td><td>チエナム点滴用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="3">キノロン</td><td>シプロフロキサシン</td><td>シプロキサン注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>パズフロキサシン</td><td>パシル/パズクロス</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>レボフロキサシン</td><td>クラビット点滴静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="6">抗MRSA・VRE薬</td><td>キヌプリスチン/ダルホプリスチン</td><td>注射用シナシッド</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アルベカシン</td><td>ハベカシン注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>バンコマイシン</td><td>塩酸バンコマイシン点滴静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>テイコプラニン</td><td>注射用タゴシッド</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>リネゾリド</td><td>ザイボックス注射液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ダプトマイシン</td><td>キュビシン静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="4">その他</td><td>コリスチン</td><td>オルドレブ点滴静注用150mg</td>
+<td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>スルファメトキサゾール/トリメトプリム</td><td>バクトラミン注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ホスホマイシン</td><td>静注用ホスミシンＳ</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>スペクチノマイシン</td><td>トロビシン筋注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>アンフェニコール</td><td>クロラムフェニコール</td><td>クロロマイセチンサクシネート</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>イミダゾール誘導体</td><td>メトロニダゾール</td><td>アネメトロ点滴静注液</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td rowspan="9">抗真菌薬</td><td>アムホテリシンB</td><td>ファンギゾン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>リポソーマルアムホテリシンB</td><td>アムビゾーム</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ミコナゾール</td><td>フロリードＦ注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>フルコナゾール</td><td>ジフルカン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ホスフルコナゾール</td><td>プロジフ</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>イトラコナゾール</td><td>イトリゾール</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ボリコナゾール</td><td>ブイフェンド</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>カスポファンギン</td><td>カンサイダス静注用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<tr><td>ミカファンギン</td><td>ファンガード</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+</tr>
+<!--              <tr>
+                <td rowspan="3">アミノグリコシド</td>
+                <td>ストレプトマイシン</td>
+                <td>硫酸ストレプトマイシン注射用</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td>トプラマイシン</td>
+                <td>トプラシン注</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td rowspan="3">抗真菌薬</td>
+                <td>アムホテリシンB</td>
+                <td>ファンギゾン</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>
+              <tr>
+                <td>ミカファンギン</td>
+                <td>ファンガード</td>
+                <td>
+                  <label><input type="radio" name="q0-1">有</label><label><input type="radio" name="q0-1">無</label>
+                </td>
+                <td><input type="number" min="0">g</td>
+                <td><input type="number" min="0">日</td>
+              </tr>-->
+            </tbody>
+          </table>
+          <div class="outmemo">
+<pre>
+現行RICSSと同じ
+</pre>
+          </div><!-- .outmemo -->
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

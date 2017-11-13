@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICT関連情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+ 	<header>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+      <ul class="nav nav-tabs" id="nav02">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="05.html">ASP情報</a></li>
+      </ul>
+    </heaeder>
+    <h1>ICT関連情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">感染管理コンサルテーション</h2>
+          <ul>
+            <li>ICT医師のICD資格<label>
+              <input type="radio" name="q2_1" value="">あり</label><label><input type="radio" name="q2_1" value="">なし</label></li>
+          </ul>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>ー</td>
+                  <td>施設数？割合？</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">細菌検査関連の体制評価</h2>
+          <ul>
+            <li>耐性菌検出例のICTでの監視<sup>*</sup>
+              <label><input type="radio" name="q2_2">有</label><label><input type="radio" name="q2_2">無</label><br>
+              <sup>*</sup>必要時の感染症コンサルトを含む</li>
+          </ul>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>折れ線</td>
+                  <td>ー</td>
+                  <td>施設数？割合？</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">手指衛生評価</h2>
+          <ul>
+            <li>WHO Hand Hygiene Self-Assessment Framework<br>
+              ※１年に１回以上実施すること　　<button type="button" class="btn btn-primary">採点開始</button>
+              <table style="width: 50%">
+                <tbody>
+                  <tr>
+                    <td>①</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                  <tr>
+                    <td>②</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                  <tr>
+                    <td>③</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                  <tr>
+                    <td>④</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                  <tr>
+                    <td>⑤</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                  <tr>
+                    <td>⑥</td>
+                    <td>説明のテキスト</td>
+                    <td><input type="number" min="0" disabled>点/100点</td>
+                    <td>2000年11月11日実施</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="outnum">①</span></li>
+            <li>手指衛生<!--病棟選択
+
+               <select name="op02" id="op02">
+                <option value="op02-01">病棟１</option>
+                <option value="op02-02">病棟２</option>
+                <option value="op02-03">病棟３</option>
+                <option class="criticalcare" value="op02-01">外科内科混合ICU</option>
+                <option class="criticalcare" value="op02-02">内科ICU</option>
+                <option class="criticalcare" value="op02-03">外科ICU</option>
+                <option class="criticalcare" value="op02-04">CCU(Coronary:循環器)</option>
+                <option class="criticalcare" value="op02-05">PCU(Pediatrics:小児)</option>
+                <option class="criticalcare" value="op02-06">SCU(Stroke:脳卒中)</option>
+                <option class="criticalcare" value="op02-07">TCU(Trauma:外傷)</option>
+                <option class="criticalcare" value="op02-08">BCU(Burn:熱傷)</option>
+                <option class="criticalcare" value="op02-09">その他</option>
+                <option class="criticalcare" value="op02-10">HCU</option>
+                <option value="op02-11">消火器内科</option>
+                <option value="op02-12">循環器内科</option>
+                <option value="op02-13">呼吸器内科</option>
+                <option value="op02-14">内分泌・代謝内科</option>
+                <option value="op02-15">腎臓内科</option>
+                <option value="op02-16">アレルギー●原内科</option>
+                <option value="op02-17">血液・腫瘍内科</option>
+                <option value="op02-18">神経内科</option>
+                <option value="op02-19">小児科（内科系）</option>
+                <option value="op02-20">他に分類できない内科または内科系混合</option>
+                <option value="op02-21">消化器外科</option>
+                <option value="op02-22">呼吸器外科</option>
+                <option value="op02-23">脳神経外科</option>
+                <option value="op02-24">泌尿器外科</option>
+                <option value="op02-25">乳腺外科</option>
+                <option value="op02-26">整形外科</option>
+                <option value="op02-27">形成外科</option>
+                <option value="op02-28">小児外科</option>
+                <option value="op02-29">他に分類できない外科または外科系混合</option>
+                <option value="op02-30">産科</option>
+                <option value="op02-31">婦人科</option>
+                <option value="op02-32">皮膚科</option>
+                <option value="op02-33">眼科</option>
+                <option value="op02-34">耳鼻咽喉科</option>
+                <option value="op02-35">他のいずれにも該当しない混合、その他病棟</option>
+              </select>-->
+              <table class="inputtable">
+                <tbody>
+                  <tr>
+                    <td rowspan="49">クリティカルケア</td>
+                    <td rowspan="21">ICU</td>
+                    <td rowspan="7">病棟１</td>
+                    <td colspan="7">使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7">病棟２</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7">全体</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="21">HCU</td>
+                    <td rowspan="7">病棟３</td>
+                    <td colspan="7">使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7">病棟４</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7">全体</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7" colspan="2">全体</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="9">～</td>
+                  </tr>
+                  <tr>
+                    <td colspan="9">登録した病棟が続く　　　一般急性期病棟＞内科／外科／その他</td>
+                  </tr>
+                  <tr>
+                    <td colspan="9">～</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="9" colspan="3">病院全体</td>
+                    <td colspan="7">手指衛生使用量<input type="number" min="0">ml　(/1000延べ在院日数換算<input class="inauto" type="number" min="0" disabled>ml)<span class="outnum">②</span></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="8">遵守率</td>
+                    <td rowspan="2">医師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">看護師</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">その他</td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">全体<span class="outnum">③</span></td>
+                    <td>入室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                  <tr>
+                    <td>退室</td>
+                    <td>実施回数<input type="number" min="0">回</td>
+                    <td>機会数<input type="number" min="0">回</td>
+                    <td>遵守率<input type="number" min="0" disabled>％</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+          <div class="outmemo">
+<pre>
+ICTで活用できるような表示も必要？
+</pre>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線</td>
+                  <td>点数（年次）</td>
+                  <td>平均点</td>
+                </tr>
+                <tr>
+                  <td>②</td>
+                  <td>折れ線</td>
+                  <td>病院全体の1000延べ在院日数換算使用量</td>
+                  <td>平均</td>
+                </tr>
+                <tr>
+                  <td>③</td>
+                  <td>折れ線</td>
+                  <td>病院全体の遵守率</td>
+                  <td>平均</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+        <li>
+          <h2 class="h4">院内発症感染症評価</h2>
+          <ul>
+            <li>インフルエンザ様症状患者<input type="number" min="0">件<span class="outnum">①</span></li>
+            <li>胃腸炎症状患者<input type="number" min="0">件<span class="outnum">②</span><br><sup>*</sup>入院4日目以降の発生件数のみをカウントする。</li>
+          </ul>
+          <div class="outmemo">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>グラフ</th>
+                  <th>自施設</th>
+                  <th>グループ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>①</td>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均</td>
+                </tr>
+                <tr>
+                  <td>②</td>
+                  <td>折れ線</td>
+                  <td>件数</td>
+                  <td>平均</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- .outmemo -->
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

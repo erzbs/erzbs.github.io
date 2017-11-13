@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>病院情報</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body>
+    <heaeder>
+      <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link active" href="06.html">病院情報</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">月次データ入力</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="00.html">基本情報</a>
+            <a class="dropdown-item" href="01.html">感染症診療情報</a>
+            <a class="dropdown-item" href="02.html">ICT関連情報</a>
+            <a class="dropdown-item" href="03.html">医療関連感染症情報</a>
+            <a class="dropdown-item" href="04.html">微生物関連情報</a>
+            <a class="dropdown-item" href="05.html">ASP情報</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="output.html">出力結果</a></li>
+        <li class="nav-item"><a class="nav-link" href="group.html">グループ管理</a></li>
+      </ul>
+<!--       <ul class="nav nav-tabs" id="nav01">
+        <li class="nav-item"><a class="nav-link" href="00.html">基本情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="01.html">感染症診療情報</a></li>
+        <li class="nav-item"><a class="nav-link active" href="02.html">ICT関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="03.html">医療関連感染症情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="04.html">微生物関連情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="05.html">ASP情報</a></li>
+      </ul> -->
+    </heaeder>
+    <h1>病院情報</h1>
+    <form>
+      <ul>
+        <li>
+          <h2 class="h4">基本情報</h2>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>基本グループ</th>
+                <td>基本のグループ名</td>
+                <td></td>
+              </tr>
+               <tr>
+                <th>病院名</th>
+                <td>病院の名前</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>加算区分</th>
+                <td>1</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>病床数</th>
+                <td>1000</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>細菌検査室</th>
+                <td>有</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+           </tbody>
+          </table>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>担当者名</th>
+                <td>担当者の名前</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+               <tr>
+                <th>メールアドレス</th>
+                <td>mailadd@ncgm.go.jp</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>担当者所属</th>
+                <td>所属科名</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>郵便番号</th>
+                <td>111-1111</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>東京都・・・・・・・・・・・・</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td>東京都・・・・・・・・・・・・</td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+           </tbody>
+          </table>
+        </li>
+        <li>
+          <h2 class="h4">病棟登録</h2>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>病棟１</th>
+                <td>
+                   <select name="op02" id="op02">
+                    <option class="criticalcare" value="op02-01">外科内科混合ICU</option>
+                    <option class="criticalcare" value="op02-02" selected>内科ICU</option>
+                    <option class="criticalcare" value="op02-03">外科ICU</option>
+                    <option class="criticalcare" value="op02-04">CCU(Coronary:循環器)</option>
+                    <option class="criticalcare" value="op02-05">PCU(Pediatrics:小児)</option>
+                    <option class="criticalcare" value="op02-06">SCU(Stroke:脳卒中)</option>
+                    <option class="criticalcare" value="op02-07">TCU(Trauma:外傷)</option>
+                    <option class="criticalcare" value="op02-08">BCU(Burn:熱傷)</option>
+                    <option class="criticalcare" value="op02-09">その他</option>
+                    <option class="criticalcare" value="op02-10">HCU</option>
+                    <option value="op02-11">消火器内科</option>
+                    <option value="op02-12">循環器内科</option>
+                    <option value="op02-13">呼吸器内科</option>
+                    <option value="op02-14">内分泌・代謝内科</option>
+                    <option value="op02-15">腎臓内科</option>
+                    <option value="op02-16">アレルギー●原内科</option>
+                    <option value="op02-17">血液・腫瘍内科</option>
+                    <option value="op02-18">神経内科</option>
+                    <option value="op02-19">小児科（内科系）</option>
+                    <option value="op02-20">他に分類できない内科または内科系混合</option>
+                    <option value="op02-21">消化器外科</option>
+                    <option value="op02-22">呼吸器外科</option>
+                    <option value="op02-23">脳神経外科</option>
+                    <option value="op02-24">泌尿器外科</option>
+                    <option value="op02-25">乳腺外科</option>
+                    <option value="op02-26">整形外科</option>
+                    <option value="op02-27">形成外科</option>
+                    <option value="op02-28">小児外科</option>
+                    <option value="op02-29">他に分類できない外科または外科系混合</option>
+                    <option value="op02-30">産科</option>
+                    <option value="op02-31">婦人科</option>
+                    <option value="op02-32">皮膚科</option>
+                    <option value="op02-33">眼科</option>
+                    <option value="op02-34">耳鼻咽喉科</option>
+                    <option value="op02-35">他のいずれにも該当しない混合、その他病棟</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>病棟２</th>
+                <td>
+                   <select name="op02" id="op02">
+                    <option class="criticalcare" value="op02-01">外科内科混合ICU</option>
+                    <option class="criticalcare" value="op02-02">内科ICU</option>
+                    <option class="criticalcare" value="op02-03" selected>外科ICU</option>
+                    <option class="criticalcare" value="op02-04">CCU(Coronary:循環器)</option>
+                    <option class="criticalcare" value="op02-05">PCU(Pediatrics:小児)</option>
+                    <option class="criticalcare" value="op02-06">SCU(Stroke:脳卒中)</option>
+                    <option class="criticalcare" value="op02-07">TCU(Trauma:外傷)</option>
+                    <option class="criticalcare" value="op02-08">BCU(Burn:熱傷)</option>
+                    <option class="criticalcare" value="op02-09">その他</option>
+                    <option class="criticalcare" value="op02-10">HCU</option>
+                    <option value="op02-11">消火器内科</option>
+                    <option value="op02-12">循環器内科</option>
+                    <option value="op02-13">呼吸器内科</option>
+                    <option value="op02-14">内分泌・代謝内科</option>
+                    <option value="op02-15">腎臓内科</option>
+                    <option value="op02-16">アレルギー●原内科</option>
+                    <option value="op02-17">血液・腫瘍内科</option>
+                    <option value="op02-18">神経内科</option>
+                    <option value="op02-19">小児科（内科系）</option>
+                    <option value="op02-20">他に分類できない内科または内科系混合</option>
+                    <option value="op02-21">消化器外科</option>
+                    <option value="op02-22">呼吸器外科</option>
+                    <option value="op02-23">脳神経外科</option>
+                    <option value="op02-24">泌尿器外科</option>
+                    <option value="op02-25">乳腺外科</option>
+                    <option value="op02-26">整形外科</option>
+                    <option value="op02-27">形成外科</option>
+                    <option value="op02-28">小児外科</option>
+                    <option value="op02-29">他に分類できない外科または外科系混合</option>
+                    <option value="op02-30">産科</option>
+                    <option value="op02-31">婦人科</option>
+                    <option value="op02-32">皮膚科</option>
+                    <option value="op02-33">眼科</option>
+                    <option value="op02-34">耳鼻咽喉科</option>
+                    <option value="op02-35">他のいずれにも該当しない混合、その他病棟</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+              <tr>
+                <th>病棟３</th>
+                <td>
+                   <select name="op02" id="op02">
+                    <option class="criticalcare" value="op02-01">外科内科混合ICU</option>
+                    <option class="criticalcare" value="op02-02">内科ICU</option>
+                    <option class="criticalcare" value="op02-03">外科ICU</option>
+                    <option class="criticalcare" value="op02-04">CCU(Coronary:循環器)</option>
+                    <option class="criticalcare" value="op02-05">PCU(Pediatrics:小児)</option>
+                    <option class="criticalcare" value="op02-06">SCU(Stroke:脳卒中)</option>
+                    <option class="criticalcare" value="op02-07">TCU(Trauma:外傷)</option>
+                    <option class="criticalcare" value="op02-08">BCU(Burn:熱傷)</option>
+                    <option class="criticalcare" value="op02-09">その他</option>
+                    <option class="criticalcare" value="op02-10">HCU</option>
+                    <option value="op02-11" selected>消火器内科</option>
+                    <option value="op02-12">循環器内科</option>
+                    <option value="op02-13">呼吸器内科</option>
+                    <option value="op02-14">内分泌・代謝内科</option>
+                    <option value="op02-15">腎臓内科</option>
+                    <option value="op02-16">アレルギー●原内科</option>
+                    <option value="op02-17">血液・腫瘍内科</option>
+                    <option value="op02-18">神経内科</option>
+                    <option value="op02-19">小児科（内科系）</option>
+                    <option value="op02-20">他に分類できない内科または内科系混合</option>
+                    <option value="op02-21">消化器外科</option>
+                    <option value="op02-22">呼吸器外科</option>
+                    <option value="op02-23">脳神経外科</option>
+                    <option value="op02-24">泌尿器外科</option>
+                    <option value="op02-25">乳腺外科</option>
+                    <option value="op02-26">整形外科</option>
+                    <option value="op02-27">形成外科</option>
+                    <option value="op02-28">小児外科</option>
+                    <option value="op02-29">他に分類できない外科または外科系混合</option>
+                    <option value="op02-30">産科</option>
+                    <option value="op02-31">婦人科</option>
+                    <option value="op02-32">皮膚科</option>
+                    <option value="op02-33">眼科</option>
+                    <option value="op02-34">耳鼻咽喉科</option>
+                    <option value="op02-35">他のいずれにも該当しない混合、その他病棟</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+               <tr>
+                <th>
+                  <input type="text" placeholder="病棟名">
+                </th>
+                <td>
+                   <select name="op02" id="op02">
+                    <option class="criticalcare" value="op02-01">外科内科混合ICU</option>
+                    <option class="criticalcare" value="op02-02">内科ICU</option>
+                    <option class="criticalcare" value="op02-03">外科ICU</option>
+                    <option class="criticalcare" value="op02-04">CCU(Coronary:循環器)</option>
+                    <option class="criticalcare" value="op02-05">PCU(Pediatrics:小児)</option>
+                    <option class="criticalcare" value="op02-06">SCU(Stroke:脳卒中)</option>
+                    <option class="criticalcare" value="op02-07">TCU(Trauma:外傷)</option>
+                    <option class="criticalcare" value="op02-08">BCU(Burn:熱傷)</option>
+                    <option class="criticalcare" value="op02-09">その他</option>
+                    <option class="criticalcare" value="op02-10">HCU</option>
+                    <option value="op02-11">消火器内科</option>
+                    <option value="op02-12">循環器内科</option>
+                    <option value="op02-13">呼吸器内科</option>
+                    <option value="op02-14">内分泌・代謝内科</option>
+                    <option value="op02-15">腎臓内科</option>
+                    <option value="op02-16">アレルギー●原内科</option>
+                    <option value="op02-17">血液・腫瘍内科</option>
+                    <option value="op02-18">神経内科</option>
+                    <option value="op02-19">小児科（内科系）</option>
+                    <option value="op02-20">他に分類できない内科または内科系混合</option>
+                    <option value="op02-21">消化器外科</option>
+                    <option value="op02-22">呼吸器外科</option>
+                    <option value="op02-23">脳神経外科</option>
+                    <option value="op02-24">泌尿器外科</option>
+                    <option value="op02-25">乳腺外科</option>
+                    <option value="op02-26">整形外科</option>
+                    <option value="op02-27">形成外科</option>
+                    <option value="op02-28">小児外科</option>
+                    <option value="op02-29">他に分類できない外科または外科系混合</option>
+                    <option value="op02-30">産科</option>
+                    <option value="op02-31">婦人科</option>
+                    <option value="op02-32">皮膚科</option>
+                    <option value="op02-33">眼科</option>
+                    <option value="op02-34">耳鼻咽喉科</option>
+                    <option value="op02-35">他のいずれにも該当しない混合、その他病棟</option>
+                  </select>
+                </td>
+                <td><button type="button" class="btn btn-primary">追加登録</button></td>
+              </tr>
+           </tbody>
+          </table>
+        </li>
+        <li>
+          <h2 class="h4">ログイン情報</h2>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>現在のパスワード</th>
+                <td><input type="text"></td>
+                <td></td>
+              </tr>
+               <tr>
+                <th>新しいパスワード</th>
+                <td><input type="text"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>新しいパスワード（確認用）</th>
+                <td><input type="text"></td>
+                <td><button type="button" class="btn btn-primary">変更</button></td>
+              </tr>
+           </tbody>
+          </table>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
