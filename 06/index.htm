@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+            #container {
+            	min-width: 310px;
+            	max-width: 800px;
+            	height: 400px;
+            	margin: 0 auto
+            }
+            .nav {
+                max-width: 800px;
+                margin: 100px auto;
+                list-style: none;
+            }
+            .nav li a {
+                display: inline-block;
+                padding: .1em;
+            }
+            .nav li a::before {
+                display: inline-block;
+                content: "▶";
+                margin-right: .5em;
+            }
+            :visited,:link {
+                color: #000;
+                border: none;
+                text-decoration: none;
+            }
+            :hover,:active {
+                color: #a55;
+            }
+
+		</style>
+	</head>
+	<body>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+
+<div id="container"></div>
+
+<ul class="nav">
+    <li><a href="../01/index.htm">Escherichia coli の耐性率の推移（％）</a></li>
+    <li><a href="../02/index.htm">Escherichia coli アミノグリコシド耐性率（％）ヒト＋動物</a></li>
+    <li><a href="../02/02.htm">Escherichia coli ペニシリン耐性率（％）ヒト＋動物</a></li>
+    <li><a href="../03/index.htm">Escherichia coli の耐性率と家畜動物抗菌薬使用量比較～ペニシリン系～</a></li>
+    <li><a href="../04/index.htm">MRSAの耐性率と家畜飼料抗菌薬使用量比較～マクロライド系～</a></li>
+    <li><a href="../05/index.htm">Escherichia coli 耐性率と農業抗菌薬使用量～キノロン系～</a></li>
+    <li><a href="../06/index.htm">Escherichia coli 耐性率とヒト経口抗菌薬使用量～キノロン系～</a></li>
+</ul>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: '<span style="font-style: italic;">Escherichia coli</span>の耐性率と抗菌薬使用量比較'
+    },
+    subtitle: {
+        text: 'キノロン系'
+    },
+    xAxis: [{
+        categories: ["2009年","2010年","2011年","2012年","2013年","2014年","2015年"],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value} %',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        title: {
+            text: '耐性率(%)',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+    }, { // Secondary yAxis
+        title: {
+            text: ' Defined daily dose per 1000 inhabitants per day',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        labels: {
+            format: '{value}',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'center',
+        // x: 120,
+        verticalAlign: 'bottom',
+        // y: 100,
+        // floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    plotOptions: {
+        series: {
+            connectNulls:true,
+            label: {
+                connectorAllowed: false,
+            },
+            // pointStart: 2011
+        }
+    },
+
+    series: [{
+        name: 'ヒト耐性率LVFC',
+        type: 'line',
+        yAxis: 0,
+        data: [null,null,31.4, 34.3,   35.5 ,36.1 ,38.0],
+        tooltip: {
+            valueSuffix: '%'
+        },
+        zIndex: 1,
+    },{
+        name: '経口抗菌薬消費量（DID）',
+        type: 'column',
+        yAxis: 1,
+        data:[2.20 ,null, 2.63 ,null,  2.75,null,null],
+        tooltip: {
+            valueSuffix: 't'
+        }
+    }]
+});
+		</script>
+	</body>
+</html>
